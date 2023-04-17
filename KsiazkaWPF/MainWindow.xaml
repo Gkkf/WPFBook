@@ -1,0 +1,62 @@
+﻿<Window x:Class="KsiazkaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KsiazkaWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" MaxHeight="450" MinHeight="450" Width="800" MaxWidth="800" MinWidth="800" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <Menu IsMainMenu="True" VerticalAlignment="Top" HorizontalAlignment="Center" >
+            <MenuItem Header="Plik">
+                <MenuItem Header="Zapisz" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Header="Wczytaj" Click="MenuItem_Click_1"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Opcje">
+                <MenuItem Header="Dodaj" Click="MenuItem_Click_2"></MenuItem>
+                <MenuItem Header="Edytuj" Click="MenuItem_Click_3"></MenuItem>
+                <MenuItem Header="Usuń" Click="MenuItem_Click_4"></MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <Grid Margin="10,30,10,65">
+            <DataGrid Name="dataGrid" AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Dodaj" Click="MenuItem_Click_2"/>
+                        <MenuItem Header="Edytuj" Click="MenuItem_Click_3"/>
+                        <MenuItem Header="Usuń" Click="MenuItem_Click_4"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Imie" Binding="{Binding Name}" Width="150" />
+                    <DataGridTextColumn Header="Nazwisko" Binding="{Binding Surname}" Width="150"/>
+                    <DataGridTextColumn Header="Nr Telefonu" Binding="{Binding Number}" Width="150"/>
+                    <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" Width="200"/>
+                </DataGrid.Columns>
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+            </DataGrid>
+        </Grid>
+
+        <Grid VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" x:Name="back" Margin="15, 0, 0, 10" Content="Poprzednia" Click="back_Click"/>
+            <Label Grid.Column="1" x:Name="pageCount" Margin="0, 0, 0, 10" VerticalAlignment="Center" HorizontalContentAlignment="Center" Content="1" />
+            <Button Grid.Column="2" x:Name="next" Margin="0, 0, 15, 10" Content="Następna" Click="next_Click"/>
+        </Grid>
+    </Grid>
+</Window>

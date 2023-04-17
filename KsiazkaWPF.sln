@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KsiazkaWPF", "KsiazkaWPF\KsiazkaWPF.csproj", "{BF710F55-757D-4C59-9BB0-AFC83C707AC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF710F55-757D-4C59-9BB0-AFC83C707AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF710F55-757D-4C59-9BB0-AFC83C707AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF710F55-757D-4C59-9BB0-AFC83C707AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF710F55-757D-4C59-9BB0-AFC83C707AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {538BD7C4-EF3B-4683-8CF2-ECB10E808733}
+	EndGlobalSection
+EndGlobal
